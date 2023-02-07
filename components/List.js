@@ -76,14 +76,14 @@ export default function List({ data }){
                             { data && data?.map(item=> (
                                 <tr key={item.id}>
                                     <td className={styles.rank}> { item.market_cap_rank } </td>
-                                    <td className={`${styles.name} ${styles.link}`} >
-                                        {/* <Link href={`/coin/${item.id}`} className={styles.link}> */}
+                                    <td className={styles.name}>
+                                        <Link href={`/coin/${item.id}`} className={styles.link}>
                                             <Image src={item.image} alt='' width={36} height={36} /> 
                                             <div style={{display:"flex",flexDirection:"column"}}>
                                                 <span> { item.name } </span>
                                                 <span className={styles.symbol}> { item.symbol } </span>
                                             </div>  
-                                        {/* </Link>     */}
+                                        </Link>    
                                     </td>
                                     <td className={`${styles.numbers} ${styles.price}`}> ${ formater.format(item.current_price) } </td>
                                     <td className={`${styles.numbers} ${styles.change} ${item.price_change_percentage_24h > 0 ? styles.increase : styles.decrease }`}>
