@@ -8,3 +8,25 @@
 .main {
     flex: 1;
 }
+
+.main {
+    margin-bottom: 3.125rem;
+}
+
+@media screen and (min-width:0) {
+    .main {
+        padding:0 1.25rem;
+    }
+}
+@media screen and (min-width:75rem) {
+    .main {
+        padding:0 5.9375rem;
+    }
+}
+
+@media screen and (min-width: 93.5em) {
+    .main {
+        max-width: 93.5em;
+        margin: auto;
+    }
+}
