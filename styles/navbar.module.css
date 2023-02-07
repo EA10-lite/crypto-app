@@ -1,0 +1,133 @@
+@font-face {
+    font-family: semiBold;
+    src: url('../assets/fonts/Eina\ 01\ SemiBold.otf');
+}
+@font-face {
+    font-family: regularFont;
+    src: url('../assets/fonts/Eina\ 01\ Regular.otf');
+}
+.container{
+    z-index: 1000;
+    background-color: rgb(250,250,250);
+    background-color: aliceblue;
+}
+.general {
+    border-bottom: 1px solid rgb(219,219,219);
+    padding:1.25rem;
+    background-color: white;
+    margin-bottom: 0.625rem;
+}
+.general .content {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index:100000;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+.general .content::-webkit-scrollbar {
+    display: none;
+}
+.increase {
+    color:#16c784 !important;
+}
+.decrease {
+    color:#ea3943 !important;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    flex-wrap: nowrap;
+}
+.flex1 {
+    min-width: 10.125rem;
+}
+.flex2 {
+    min-width: 14.75rem;
+}
+.flex3 {
+    min-width: 14.125rem;
+}
+.flex4 {
+    min-width: 16.25rem;
+}
+.flex5 {
+    min-width: 12.5rem;
+    margin-right: 0 !important;
+}
+.flex6 {
+    min-width: 6.75rem;
+}
+.title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    font-family: sans-serif;
+    font-family: semiBold;
+    color:rgb(56, 97, 251);
+}
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color:rgb(88, 102, 126);;
+    margin-right: 0.625rem;
+    font-family: sans-serif;
+    font-family: regularFont;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-bottom: 1px solid rgb(219,219,219);
+}
+.nav .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.logo {
+    font-size: 1rem;
+    font-family: regularFont;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 2px 0px 10px 2px rgba(0,0,0,0.2);
+}
+.navLink {
+    margin-left: 4rem;
+}
+.link {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: regularFont;
+    padding-bottom: .25rem;
+}
+.link:hover {
+    border-bottom: 2px solid black;
+}
+
+@media screen and (min-width:75rem) {
+    .general, .nav{
+        padding-left: 5.9375rem;
+        padding-right: 5.9375rem;
+    }
+}
+
+@media screen and (min-width: 93.5em) {
+    .container {
+        max-width: 93.5em;
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width: 48em) {
+    .nav .left {
+        flex-direction: column;
+    }
+}
